@@ -67,8 +67,12 @@ createP(turn+" "+boardStates[turn])
 showBoard(boardStates[turn])
 // make computer move
 // check board state in brain
-if (boardStates[turn] == herBrain[2].board){
-    createP(turn+"yes it is there")
+for(let i =0; i<herBrain.length;i++){
+    print(i,herBrain[i].board)
+    if (boardStates[turn] == herBrain[i].board){
+        createP(turn+"yes it is there"+herBrain[i].gameMove)
+        break;
+  }
 }
 
 
@@ -99,5 +103,5 @@ function showBoard(board,t){
   text(board[6],40,130);
   text(board[7],80,130);
   text(board[8],130,130);
-  text(turn,100,100)
+  text(turn,300,300)
 }
