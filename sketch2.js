@@ -24,18 +24,19 @@ herBrain[1] =  {
     compMove:[ 
            "C-C-CHHH-",
            "-CCC-HHH-",
-           "C-C--C HH-"
+           "C-C--CHH-"
            ]
   };
 
   herBrain[2] =  {
-    board: "CCC-C-H-H",
+    board: "CCC-H-H-H",
     gameMove:"2 center",
-    expl: "computer starts with list of three possible moves",
+    expl: "computer starts with list of 4 possible moves although in the matchbox version they only list 2 to be reflected",
     compMove:[ 
-           "C-C-CHHH-",
-           "-CCC-HHH-",
-           "C-C--C HH-"
+           "-CCCH-H-H",
+           "CC--HCH-H", 
+           "-CC-C-H-H", // c captures h from the Left
+           "CC--C-H-H"  // c captures h from the right
            ]
   };
   
@@ -46,14 +47,14 @@ function setup() {
   fill(0,255,0)
   textAlign(LEFT,TOP);
   //rectMode(CENTER)
-  showBoard(states[2]);
+  showBoard(boardStates[0]);
   
 }
 
  
 
 
-function showBoard(move,t){
+function showBoard(board,t){
   background(0);
   textSize(40);
   let sz = 40;
@@ -66,14 +67,13 @@ function showBoard(move,t){
       
   }
   fill(0,255,0)
-  text(move.board[0],40,40);
-  text(move.board[1],80,40);
-  text(move.board[2],130,40);
-  text(move.board[3],40, 80);
-  text(move.board[4],80,80);
-  text(move.board[5],130,80);
-  text(move.board[6],40,130);
-  text(move.board[7],80,130);
-  text(move.board[8],130,130);
-  text(move.expl,40,200);
+  text(board[0],40,40);
+  text(board[1],80,40);
+  text(board[2],130,40);
+  text(board[3],40, 80);
+  text(board[4],80,80);
+  text(board[5],130,80);
+  text(board[6],40,130);
+  text(board[7],80,130);
+  text(board[8],130,130);
 }
