@@ -10,7 +10,7 @@ This game originally appeared in Martin Gardner's Mathematical Games column
 
 I first read about it in Basic Computer Games
 
-There is a Vsause2 abut it.
+There is a Vsause2 about it.
 
 
 
@@ -24,6 +24,7 @@ http://www.cs.williams.edu/~freund/cs136-073/GardnerHexapawn.pdf
 https://www.cc.gatech.edu/gvu/people/Phd/Ian/2360/lect11.html
 
 https://youtu.be/FhI3BxPqNss
+
 
 https://www.cs.drexel.edu/~jpopyack/Courses/AI/AdvSp21/assignments/HW2/Hexapawn.pdf
 

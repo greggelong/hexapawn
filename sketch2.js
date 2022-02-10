@@ -6,8 +6,8 @@ let boardStates = ["CCC---HHH"] // list of strings tht Identify board states
 
  
 herBrain[0] =  {
-  board: "CCCH--HH",
-  gameMove:2
+  board: "CCCH---HH",
+  gameMove:"2 left",
   expl: "computer starts with list of three possible moves",
   compMove:[ 
          "C-CHC--HH",
@@ -19,12 +19,23 @@ herBrain[0] =  {
 
 herBrain[1] =  {
     board: "CCC--HHH-",
-    gameMove:2
+    gameMove:"2 right",
     expl: "computer starts with list of three possible moves",
     compMove:[ 
-           "C-CHC--HH",
-           "CC-H-C-HH",
-           "C-CC---HH"
+           "C-C-CHHH-",
+           "-CCC-HHH-",
+           "C-C--C HH-"
+           ]
+  };
+
+  herBrain[2] =  {
+    board: "CCC-C-H-H",
+    gameMove:"2 center",
+    expl: "computer starts with list of three possible moves",
+    compMove:[ 
+           "C-C-CHHH-",
+           "-CCC-HHH-",
+           "C-C--C HH-"
            ]
   };
   
