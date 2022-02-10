@@ -60,10 +60,18 @@ function setup() {
 
  
 function update(){
- 
+// make human move
 turn++
 boardStates[turn] = myinput.value();
 createP(turn+" "+boardStates[turn])
+showBoard(boardStates[turn])
+// make computer move
+// check board state in brain
+if (boardStates[turn] == herBrain[2].board){
+    createP(turn+"yes it is there")
+}
+
+
 
 
 
