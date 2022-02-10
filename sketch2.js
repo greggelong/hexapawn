@@ -2,6 +2,8 @@ let herBrain = []; // Hexapawn Educatable Robot Brain are an array of objects, m
 
 let boardStates = ["CCC---HHH"] // list of strings tht Identify board states
 
+let myinput;
+
 
 
  
@@ -41,18 +43,31 @@ herBrain[1] =  {
   };
   
  
-
+let turn =0;
+let mybutton;
 function setup() {
   createCanvas(400, 400);
   fill(0,255,0)
   textAlign(LEFT,TOP);
   //rectMode(CENTER)
   showBoard(boardStates[0]);
+  myinput = createInput(boardStates[0])
+  mybutton = createButton("return")
+  mybutton.mouseClicked(update)
+  createP(turn+" "+boardStates[0])
   
 }
 
  
+function update(){
+ 
+turn++
+boardStates[turn] = myinput.value();
+createP(turn+" "+boardStates[turn])
 
+
+
+}
 
 function showBoard(board,t){
   background(0);
@@ -76,4 +91,5 @@ function showBoard(board,t){
   text(board[6],40,130);
   text(board[7],80,130);
   text(board[8],130,130);
+  text(turn,100,100)
 }
