@@ -1,56 +1,34 @@
 let herBrain = []; // Hexapawn Educatable Robot Brain are an array of objects, matchbox movies
 
-let boardStates = [] // list of strings tht Identify board states
+let boardStates = ["CCC---HHH"] // list of strings tht Identify board states
 
 
-states[0] = {
-  board: ["C","C","C"," "," "," ","H","H","H"],
-  
-  expl: "human moves first"
-  
-};
-states[1] =  {
-  board: ["C","C","C",
-          "H"," "," ",
-          " ","H","H"],
-  expl: "computer has three moves",
-  compMove:[["C"," ","C",
-          "H","C"," ",
-          " ","H","H"],
-         
-         ["C","C"," ",
-          "H"," ","C",
-          " ","H","H"],
-          
-         ["C"," ","C",
-          "C"," "," ",
-          " ","H","H"],
+
+ 
+herBrain[0] =  {
+  board: "CCCH--HH",
+  gameMove:2
+  expl: "computer starts with list of three possible moves",
+  compMove:[ 
+         "C-CHC--HH",
+         "CC-H-C-HH",
+         "C-CC---HH"
          ]
-  
-  
 };
 
-states[2] =  {
-  board: ["C","C","C",
-          " "," ","H",
-          "H","H"," "],
-  expl: "computer has three moves",
-  compMove:
-        [["C"," ","C",
-          " ","C","H",
-          "H","H"," "],
-         
-         [" ","C","C",
-          "C"," ","H",
-          "H","H"," "],
-          
-         ["C"," ","C",
-          " "," "," ",
-          "H","H","H"],
-         ]
+
+herBrain[1] =  {
+    board: "CCC--HHH-",
+    gameMove:2
+    expl: "computer starts with list of three possible moves",
+    compMove:[ 
+           "C-CHC--HH",
+           "CC-H-C-HH",
+           "C-CC---HH"
+           ]
+  };
   
-  
-};
+ 
 
 function setup() {
   createCanvas(400, 400);
