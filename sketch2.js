@@ -64,6 +64,9 @@ function update(){
 turn++
 boardStates[turn] = myinput.value();
 createP(turn+" "+boardStates[turn])
+createP(boardStates[turn].slice(0,3))
+createP(boardStates[turn].slice(3,6))
+createP(boardStates[turn].slice(6,9))
 showBoard(boardStates[turn])
 // make computer move
 // check board state in brain
