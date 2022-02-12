@@ -44,8 +44,8 @@ herBrain[2] =  {
   
   herBrain[3] =  {
     board: "C-CCH---H",
-    gameMove:"from 2 left move3 and HB1toHB2",
-    expl: "computer starts with list of 4 possible moves although in the matchbox version they only list 2 to be reflected",
+    gameMove:"4th turn from 2 left move3 and HB1toHB2",
+    expl: "computer has 4 moves first move is a win box in Gardener is G3",
     compMove:[ 
            "C-C-H-C-H",  // computer win
            "--CCC---H", 
