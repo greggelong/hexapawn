@@ -30,7 +30,7 @@ herBrain[1] =  {
            ]
   };
 
-  herBrain[2] =  {
+herBrain[2] =  {
     board: "CCC-H-H-H",
     gameMove:"2 center",
     expl: "computer starts with list of 4 possible moves although in the matchbox version they only list 2 to be reflected",
@@ -42,7 +42,19 @@ herBrain[1] =  {
            ]
   };
   
- 
+  herBrain[3] =  {
+    board: "C-CCH---H",
+    gameMove:"from 2 left move3 and HB1toHB2",
+    expl: "computer starts with list of 4 possible moves although in the matchbox version they only list 2 to be reflected",
+    compMove:[ 
+           "C-C-H-C-H",  // computer win
+           "--CCC---H", 
+           "C--CC---H", 
+           "C--CHC--H"  
+           ]
+  };
+  
+  
 let turn =0;
 let mybutton;
 function setup() {
