@@ -6,8 +6,15 @@ an array of javaScript objects as matchboxes
 
 In sketch2.js  I began to make boxes for all of the boxes in Gardeners article.  This would make the learning process even slower as a mistake move on the left could be made again on the right
 
-So in sketch3. js I am not making boxes for reflections
- if in move two the computer make a bad move on the left it will not repeat that same bad move on the right.  This is a type of built in analogical thinking. that makes it more like learning by punishment for the type of move not the specific move.  The same works for reward. we are rewarding certain types of moves not just moves (a winning move on the right is like a winning move on the left)
+So in sketch3. js I am not making boxes for reflections.
+ if the computer makes a bad move on the left it will not repeat that same bad move on the right.  This is a type of built in analogical thinking. that makes it more like learning by punishment for the type of move not the specific move.  The same works for reward. we are rewarding certain types of moves not just moves (a winning move on the right is like a winning move on the left)
+
+I have made a function to make reflections 
+
+I will need to check to the for that turn and the reflections
+during game play will need to have a boolean to keep track if it is the current play is playing reflection or not
+
+
 
 
 
