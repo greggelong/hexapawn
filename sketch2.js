@@ -68,6 +68,17 @@ herBrain[2] =  {
            ]
   };
   
+
+  herBrain[5] =  {
+    board: "-CCHC---H",
+    gameMove:"4th turn from 2 center move3 and HA1toHA2",
+    expl: "computer has 3 moves one is a win in Gardner G4",
+    compMove:[ 
+           "--CCC---H",  
+           "-CCH---CH", //win computer 
+           "-C-HCC--H" 
+           ]
+  };
   
 let turn =0;
 let mybutton;
