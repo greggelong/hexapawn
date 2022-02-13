@@ -21,7 +21,7 @@ herBrain[0] =  {
 
  
 
-herBrain[2] =  {
+herBrain[1] =  {
     board: "CCC-H-H-H",
     gameMove:"2 center",
     expl: "computer starts with list of 4 possible moves although in the matchbox version they only list 2 to be reflected",
@@ -33,7 +33,7 @@ herBrain[2] =  {
            ]
   };
   
-  herBrain[3] =  {
+  herBrain[2] =  {
     board: "C-CCH---H",
     gameMove:"4th turn from 2 left move3 and HB1toHB2",
     expl: "computer has 4 moves first move is a win box in Gardener is G3",
@@ -48,7 +48,7 @@ herBrain[2] =  {
 
  
 
-  herBrain[5] =  {
+  herBrain[4] =  {
     board: "-CCHC---H",
     gameMove:"4th turn from 2 center move3 and HA1toHA2",
     expl: "computer has 3 moves one is a win in Gardner G4",
