@@ -104,6 +104,7 @@ function setup() {
   mybutton = createButton("return")
   mybutton.mouseClicked(update)
   createP(turn+" "+boardStates[0])
+  makeReflection("C-CCH---H")
   
 }
 
@@ -156,4 +157,13 @@ function showBoard(board,t){
   text(board[7],80,130);
   text(board[8],130,130);
   text(turn,300,300)
+}
+
+
+
+function makeReflection(mystring){
+ // reflection function could be used to check boxes like Gardner
+ let result = ""
+ result = mystring[2] +mystring[1]+mystring[0]+mystring[5]+mystring[4]+mystring[3]+mystring[8]+mystring[7]+mystring[6];
+ print(mystring,result)
 }
