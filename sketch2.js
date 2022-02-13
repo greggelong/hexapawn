@@ -53,6 +53,20 @@ herBrain[2] =  {
            "C--CHC--H"  
            ]
   };
+
+
+
+  herBrain[4] =  {
+    board: "C-C-HCH--",
+    gameMove:"4th turn from 2 right move3 and HB1toHB2",
+    expl: "computer has 4 moves first move is a win box is not in Gardener but a reflection",
+    compMove:[ 
+           "C-C-H-H-C",  // computer win
+           "C---CCH--", 
+           "--C-CCH--", 
+           "--CCHCH--"  
+           ]
+  };
   
   
 let turn =0;
