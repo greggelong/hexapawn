@@ -61,19 +61,21 @@ herBrain[1] =  {
 
  
   
-let turn =0;
+let turn = 0;
 let mybutton;
+
 function setup() {
   createCanvas(400, 400);
   fill(0,255,0)
   textAlign(LEFT,TOP);
   //rectMode(CENTER)
-  showBoard(boardStates[0]);
+  
   myinput = createInput(boardStates[0])
   mybutton = createButton("return")
   mybutton.mouseClicked(update)
   createP(turn+" "+boardStates[0])
   makeReflection("C-CCH---H")
+  showBoard(boardStates[0]);
   
 }
 
@@ -83,13 +85,14 @@ function update(){
 reflect = false;
 turn++
 boardStates[turn] = myinput.value();
-createP(turn+" "+boardStates[turn])
-createP(boardStates[turn].slice(0,3))
-createP(boardStates[turn].slice(3,6))
-createP(boardStates[turn].slice(6,9))
+//createP(turn+" "+boardStates[turn])
+//createP(boardStates[turn].slice(0,3))
+//createP(boardStates[turn].slice(3,6))
+//createP(boardStates[turn].slice(6,9))
 showBoard(boardStates[turn])
 // make computer move
-// check board state in brain
+// get index board state in brain
+let bindex =0;
 for(let i =0; i<herBrain.length;i++){
     print(i,herBrain[i].board)
     if (boardStates[turn] == herBrain[i].board || boardStates[turn] == makeReflection(herBrain[i].board)){
@@ -102,13 +105,27 @@ for(let i =0; i<herBrain.length;i++){
   }
 }
 
-
+// get move
+turn++
+if (reflect){
+  boardStates[turn] = makeReflection(random(herBrain[bindex].compMove))
+}else{
+  boardStates[turn] = random(herBrain[bindex].compMove);
+}
+showBoard(boardStates[turn])
 
 
 
 }
 
-function showBoard(board,t){
+function showBoard(board){
+
+ createP(turn+" "+board)
+ createP(board.slice(0,3))
+ createP(board.slice(3,6))
+ createP(board.slice(6,9))
+ myinput.value(board);
+
   background(0);
   textSize(40);
   let sz = 40;
