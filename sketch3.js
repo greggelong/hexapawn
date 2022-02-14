@@ -184,7 +184,8 @@ function makeReflection(mystring) {
   return result = mystring[2] + mystring[1] + mystring[0] + mystring[5] + mystring[4] + mystring[3] + mystring[8] + mystring[7] + mystring[6];
 
 }
-
+// have separate check for computer win and human win by advancing(H in the front of the list, c in the back), eating (no h or c) 
+// have list of cannot move "C-CHCH-H-" "C--HC--H-" "-C--HC--H" ("-C-CH-H--") can make reflections
 
 /*
 // remove method to take a out a bead from a box using
