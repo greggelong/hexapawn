@@ -184,3 +184,24 @@ function makeReflection(mystring) {
   return result = mystring[2] + mystring[1] + mystring[0] + mystring[5] + mystring[4] + mystring[3] + mystring[8] + mystring[7] + mystring[6];
 
 }
+
+
+/*
+// remove method to take a out a bead from a box using
+//https://love2dev.com/blog/javascript-remove-from-array/
+function arrayRemove(arr, value) { 
+    
+  return arr.filter(function(ele){ 
+      return ele != value; 
+  });
+}
+
+
+but I should be able to use splice since I have the index of the array as bead
+a = ["A","B","C"]
+(3) ['A', 'B', 'C']
+a.splice(1,1);
+['B']
+a
+(2) ['A', 'C']
+*/
