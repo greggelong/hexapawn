@@ -48,7 +48,7 @@ herBrain[1] =  {
 
  
 
-  herBrain[4] =  {
+  herBrain[3] =  {
     board: "-CCHC---H",
     gameMove:"4th turn from 2 center move3 and HA1toHA2",
     expl: "computer has 3 moves one is a win in Gardner G4",
