@@ -222,7 +222,9 @@ function gameReset(){
 function punish(){
   print(herBrain[bindex].compMove)
   // remove that bead
+  createP("I have removed this bead that lead to loss "+herBrain[bindex].compMove[bead])
   herBrain[bindex].compMove.splice(bead,1)
+  
   print(herBrain[bindex].compMove)
 }
 // have separate check for computer win and human win by advancing(H in the front of the list, c in the back), eating (no h or c) 
