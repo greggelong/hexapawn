@@ -197,7 +197,9 @@ function checkHumanWin(board){
    if(board[0] === "H" || board[1] === "H" || board[2] === "H"){
      games.push("H");
      createP(games.length+" human got to other side")
+     punish()
      gameReset()
+     
      return
    }
 
@@ -208,10 +210,20 @@ function gameReset(){
   createP("******* next game *******")
   boardStates = ["CCC---HHH"];
   turn = 0;
+  bindex=0;
   print(boardStates)
   showBoard(boardStates[turn])
 
 
+}
+
+
+
+function punish(){
+  print(herBrain[bindex].compMove)
+  // remove that bead
+  herBrain[bindex].compMove.splice(bead,1)
+  print(herBrain[bindex].compMove)
 }
 // have separate check for computer win and human win by advancing(H in the front of the list, c in the back), eating (no h or c) 
 // have list of cannot move "C-CHCH-H-" "C--HC--H-" "-C--HC--H" ("-C-CH-H--") can make reflections
