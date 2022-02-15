@@ -63,10 +63,11 @@ herBrain[3] = {
 
 let turn = 0;
 let mybutton;
+let cbutton;
 let bindex; // global variable to keep track of the box in the computer brain I am using
 let bead;  // global variable to keep track of witch move or bead is taken from box
 //  bead taken away if directly leads to loss
-
+let games = []; // a global array that will hold who wins computer or human and len will tell number of games played
 function setup() {
   createCanvas(400, 400);
   fill(0, 255, 0)
@@ -75,29 +76,34 @@ function setup() {
 
   myinput = createInput(boardStates[0])
   mybutton = createButton("return")
-  mybutton.mouseClicked(update)
+  mybutton.mouseClicked(updateH)
+  cbutton = createButton("computer turn")
+  cbutton.mouseClicked(updateC)
   createP(turn + " " + boardStates[0])
   makeReflection("C-CCH---H")
   showBoard(boardStates[0]);
 
 }
 
-
-function update() {
+// must have seperate update functions in case of a win to start over
+function updateH() {
   // make human move
-  reflect = false;
+ 
   turn++
   print(turn,reflect)
   boardStates[turn] = myinput.value();
-  //createP(turn+" "+boardStates[turn])
-  //createP(boardStates[turn].slice(0,3))
-  //createP(boardStates[turn].slice(3,6))
-  //createP(boardStates[turn].slice(6,9))
+   
   showBoard(boardStates[turn])
+  // check if human wins
+  checkHumanWin(boardStates[turn]);
+}
+
+function updateC(){
   // make computer move
   // get index board state in brain
   // need to make these global let bindex = 0; // a function scope variable to hold the index of the herBrain that matches a board or reflection
   //let bead; // a function scope variable to hold the index of the move that box ie the bead
+  reflect = false;
   for (let i = 0; i < herBrain.length; i++) {
     print(i, herBrain[i].board)
     // logic was wrong here when used an or they can be both so first check for non reflection 
@@ -125,7 +131,7 @@ function update() {
         break; // stop looking
     }
   }
-
+  
   // get move
   
   turn++ // sets the computerns next turn and keeps track of the bead
@@ -172,7 +178,8 @@ function showBoard(board) {
   text(board[6], 40, 130);
   text(board[7], 80, 130);
   text(board[8], 130, 130);
-  text(turn, 300, 300)
+  text("Turn: "+turn, 200, 300)
+  text("Games: "+games.length, 200,350)
 }
 
 
@@ -182,6 +189,28 @@ function makeReflection(mystring) {
   let result = ""
 
   return result = mystring[2] + mystring[1] + mystring[0] + mystring[5] + mystring[4] + mystring[3] + mystring[8] + mystring[7] + mystring[6];
+
+}
+
+function checkHumanWin(board){
+  // check if human reached the other side
+   if(board[0] === "H" || board[1] === "H" || board[2] === "H"){
+     games.push("H");
+     createP(games.length+" human got to other side")
+     gameReset()
+     return
+   }
+
+}
+
+
+function gameReset(){
+  createP("******* next game *******")
+  boardStates = ["CCC---HHH"];
+  turn = 0;
+  print(boardStates)
+  showBoard(boardStates[turn])
+
 
 }
 // have separate check for computer win and human win by advancing(H in the front of the list, c in the back), eating (no h or c) 
