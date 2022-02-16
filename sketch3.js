@@ -59,7 +59,16 @@ herBrain[3] = {
   ]
 };
 
-
+herBrain[4] = {
+  board: "C-CHH--H-",
+  gameMove: "4th turn from 2 left (G1) move 1 and hc1 to hb2",
+  expl: "computer has 3 moves one is a win by blocking in Gardner G5",
+  compMove: [
+    "--CHC--H-",
+    "C--HC--H-", //win computer blocking
+    "C--HHC-H-"
+  ]
+};
 
 let turn = 0;
 let mybutton;
