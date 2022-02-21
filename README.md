@@ -24,6 +24,8 @@ I first read about it in Basic Computer Games
 
 There is a Vsause2 about it.
 
+feb 21 2022 I have vs code and am editing from the office at school
+
 
 
 
